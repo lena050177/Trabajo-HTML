@@ -168,7 +168,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    width: 80%;
+    width: 90%;
     margin: 10px auto;
     justify-content: space-around;
     align-items: center;
@@ -176,9 +176,10 @@ section {
 .container li {
     justify-content: center;
     line-height: 50px;
+    
 }
 .container p {
-    text-align: justify;
+    text-align: center;
     line-height: 30px;
 }
 /*---------------------------------------------------------- Galeria INDEX -------------------------------------------*/
@@ -324,11 +325,10 @@ hr {
 
 .mapa {
     width: 80%;
-    min-height: 100vh;
+   
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    justify-content: center;
     align-items: center;
 }
 .mapa p {
@@ -373,6 +373,11 @@ hr {
     padding: 10px;
     border-radius: 5px;
     transform: translateY(-60px);
+}
+.descripcion p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .producto:hover .descripcion {
     transform: translateY(0px);
@@ -421,7 +426,7 @@ hr {
     }
     .container {
         grid-template-columns: 1fr;
-        
+        margin: 10px auto;  
     }  
     .container ul {
         width: 50%;
@@ -432,6 +437,14 @@ hr {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(8, 1fr) ;
+    }
+    .descripcion {
+        background: none;
+    }
+    .descripcion p {
+        background-color: rgba(255, 255, 255, 0.635);
+        padding: 10px;
+        border-radius: 5px;
     }
 }    
 
