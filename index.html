@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipTop Tapicería Marbella</title>
+    <meta name="description" content="Taller de tapiceria automobil en Marbella">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+        </style>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body> 
+    <header>  
+        <div class="logo">
+            <img src="./assets/images/logotip.svg" alt="logo tiptop" width="200" height="200">
+        </div>
+        <div>
+            <input type="checkbox" id="check-menu" class="check-menu">
+
+            <nav class="nav-links">
+                <a href="./index.html">Inicio</a>
+                <a href="./views/productos.html">Productos</a>
+                <a href="./views/presupuesto.html">Presupuesto</a>
+                <a href="./views/contacto.html">Contacto</a>  
+            </nav>
+
+            <label for="check-menu" class="label-check">
+                <img src="./accets/images/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
+            </label>
+        </div>
+        <div class="contacto">
+            <p><img src="./assets/images/whatsapp-logo.svg" alt="logo whatsapp" width="20" height="20">(+34) 603 849 757</p>
+            <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>
+            <div class="redes">
+                <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+                <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+                <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contenido hero">
+            <div class="info">
+                <h1>Restauración y personalización  <br> para una experiencia única al volante</h1>
+                <p>Nos dedicamos a la restauración y mejora de vehículos de todas las épocas,</p>
+                <p> desde clásicos hasta modelos recientes.</p>
+                <p>Ofrecemos soluciones de tapizado y restauración con materiales de la más alta calidad.</p> 
+                <p> Nuestro compromiso es devolverle a tu vehículo el confort, la estética y la elegancia que se merece.</p>
+            </div>
+        </section>
+   
+        <section class="container">
+            <div>
+             <h2> Nuestros Servicios</h2>
+                <ul>
+                    <li>Diseño de tapicería personalizado</li>
+                    <li>Instalación de tapicería</li>
+                    <li>Reconstrucciones de asientos</li>
+                    <li>Reparación de tapizados</li>
+                    <li>Restauración de antigüedades</li>
+                    <li>Tapizado de barcos</li>
+                    <li>Reformas</li>
+                </ul>
+            </div>
+            <div class="galeria">
+                <img src="./assets/images/asientos-barco.jpg" alt="imagen1" width="400" height="300">
+                <img src="./assets/images/asientosporsche3.jpg" alt="imagen2" width="400" height="286">
+                <img src="./assets/images/puertaporsche1.jpg" alt="imagen3" width="400" height="300">
+                <img src="./assets/images/salpicadero-reparado.jpg" alt="imagen4" width="400" height="300">
+                <img src="./assets/images/volante3.jpg" alt="imagen5" width="400" height="400">
+                <img src="./assets/images/volante1.jpg" alt="imagen6" width="400" height="300">   
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="contact-form">
+                <h2>Contactanos:</h2>
+                <form  id="contact-form" action="#" method="post" target="_blank">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" pattern="[A-Z a-z]{2,40}" title="Solo letras entre 2 y 40 caracteres" required>
+    
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" name="email" placeholder="Correo electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" title="Correo electronico no valido" required>
+
+                    <label for="telephone">Telefono:</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Telefono" pattern="[0-9]{9}" title="Como minimo 9 caracteres" required>
+    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+
+                    <label for="aceptar">Acepto la politica de privacidad</label>
+                    <input type="checkbox" id="aceptar" name="aceptar" required>
+                    
+    
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+            <div class="location, mapa">
+                <h2>Direccion:</h2>
+                <p>C. Diamante, 37, 29603 <br>Poligono Industrial "La Ermita" <br> Marbella, Málaga, España</p>
+                <a href="https://maps.app.goo.gl/1nyGeTP441d4KmiH8" target="_blank" class="button-link" style="color: black;">como llegar</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.6513957949824!2d-4.872217790050994!3d36.514276272214644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d9f653f75841%3A0x589be46774dcb69e!2sTipTop%20Tapicer%C3%ADa!5e0!3m2!1ses!2ses!4v1742337614005!5m2!1ses!2ses" width="800" height="330" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>© 2025 Tip Top Taller. <br>Todods los derechos reservados</p> 
+            <a href="#">Politica de privacidad</a>
+        </div>
+        <div>
+            <p class="p-footer"> CONTACTO:</p>
+            <p>C. Diamante, 37, 29603 Marbella, Málaga, España <br>(+34) 603 849 757 <br> tiptoptapiceria@gmail.com</p>
+        </div>
+        <div>
+            <div class="p-footer">
+            <p>SIGUENOS EN:</p>
+            </div>
+            <div class="redes">
+            <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+            <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+            <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

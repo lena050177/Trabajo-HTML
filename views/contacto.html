@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipTop Tapicería Marbella</title>
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+        </style>
+    <link rel="stylesheet" href="./../css/estilos.css">
+</head>
+<body> 
+    <header>  
+        <div class="logo">
+            <img src="./../assets/images/logotip.svg" alt="logo tiptop" width="200" height="200">
+        </div>
+        <div>
+            <input type="checkbox" id="check-menu" class="check-menu">
+
+            <nav class="nav-links">
+                <a href="./../index.html">Inicio</a>
+                <a href="./productos.html">Productos</a>
+                <a href="./presupuesto.html">Presupuesto</a>
+                <a href="./contacto.html">Contacto</a>  
+            </nav>
+
+            <label for="check-menu" class="label-check">
+                <img src="./../assets/images/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
+            </label>
+        </div>
+        <div class="contacto">
+            <p><img src="./../assets/images/whatsapp-logo.svg" alt="logo whatsapp" width="20" height="20">(+34) 603 849 757</p>
+            <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>
+            <div class="redes">
+                <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+                <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+                <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="info">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna duda o consulta?</p>
+            <p>Estamos a tu disposición para resolver cualquier duda</p>
+            <p>que tengas sobre nuestros servicios.</p>
+            </div>  
+        </section>
+            
+        <section class="container">
+            <div class="location">
+                <div class="redes">
+                    <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+                    <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+                    <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+                </div>
+                <h3>HORARIO DE ATENCION</h3>
+                <p>De lunes a viernes</p>
+                <p>de 9:00 a 13:45 y de 15:00 a 18:00</p> 
+                <p> Sábados y Domingo CERRAD
+                </p>
+                <h3>WATSAPP</h3>
+                <p>(+34) 603 849 757</p>
+                <h3>EMAIL</h3>
+                <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>   
+                <h3>DIRECCIÓN</h3>
+                <p>C. Diamante, 37, 29603</p> 
+                <p>Poligono Industrial "La Ermita"</p> 
+                <p> Marbella, Málaga, España</p>
+                <a href="https://maps.app.goo.gl/1nyGeTP441d4KmiH8" target="_blank" class="button-link" style="color: black;">como llegar</a>
+            </div>
+            <div class="contact-form">
+                <h2>¿En qué podemos ayudarle?</h2>
+                <form id="contact-form" action="#" method="post" target="_blank">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" pattern="[A-Z a-z]{2,40}" title="Solo letras entre 2 y 40 caracteres" required>
+        
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" name="email" placeholder="Correo electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" title="Correo electronico no valido" required>
+    
+                    <label for="telephone">Telefono:</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Telefono" pattern="[0-9]{9}" title="Como minimo 9 caracteres" required>
+        
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+    
+                    <input type="checkbox" id="aceptar" name="aceptar" required>
+                    <label for="aceptar">Acepto la politica de privacidad</label>
+        
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+        </section>
+
+        <div class="mapa">
+            <h2>Localización</h2>
+            <hr>
+            <p>VISITA NUESTRAS INSTALACIONES</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.6513957949824!2d-4.872217790050994!3d36.514276272214644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d9f653f75841%3A0x589be46774dcb69e!2sTipTop%20Tapicer%C3%ADa!5e0!3m2!1ses!2ses!4v1742337614005!5m2!1ses!2ses" width="1000" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p>© 2025 Tip Top Taller. <br>Todods los derechos reservados</p> 
+            <a href="#">Politica de privacidad</a>
+        </div>
+        <div>
+            <p class="p-footer"> CONTACTO:</p>
+            <p>C. Diamante, 37, 29603 Marbella, Málaga, España <br>(+34) 603 849 757 <br> tiptoptapiceria@gmail.com</p>
+        </div>
+        <div>
+            <div class="p-footer">
+            <p>SIGUENOS EN:</p>
+            </div>
+            <div class="redes">
+            <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+            <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+            <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

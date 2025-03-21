@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipTop Tapicería Marbella</title>
+    <link rel="icon" type="image/x-icon" href="./../favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+        </style>
+    <link rel="stylesheet" href="./../css/estilos.css">
+</head>
+<body> 
+    <header>  
+        <div class="logo">
+            <img src="./../assets/images/logotip.svg" alt="logo tiptop" width="200" height="200">
+        </div>
+        <div>
+            <input type="checkbox" id="check-menu" class="check-menu">
+
+            <nav class="nav-links">
+                <a href="./../index.html">Inicio</a>
+                <a href="./productos.html">Productos</a>
+                <a href="./presupuesto.html">Presupuesto</a>
+                <a href="./contacto.html">Contacto</a>  
+            </nav>
+
+            <label for="check-menu" class="label-check">
+                <img src="./../assets/images/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
+            </label>
+        </div>
+        <div class="contacto">
+            <p><img src="./../assets/images/whatsapp-logo.svg" alt="logo whatsapp" width="20" height="20">(+34) 603 849 757</p>
+            <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>
+            <div class="redes">
+                <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+                <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+                <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="info">
+            <h1>Presupuesto</h1>
+            <p>SIEMPRE A SU DISPOSICIÓN</p>
+            </div>  
+        </section>
+        <section class="container">
+            <div>
+                <h2>Solicita su presupuesto sin compromiso</h2>
+                <p>
+                    El interior de los vehículos con el paso del tiempo y el uso sufre desgaste. Si este es su caso y lleva tiempo pensando en renovar el aspecto de su vehículo, le damos la solución que necesita con acabados de máxima calidad. <br>
+                    Somos especialistas en la renovación y el tapizado de todo el interior de su vehículo: asientos, volantes, salpicadero, puertas, alfombrillas, techos, etc <br>
+                    El volante es una pieza fundamental de nuestro vehículo y una de las que más se desgasta con el uso. Somos especialistas en el tapizado de todo tipo de volantes ofreciendo la posibilidad de modificar el diseño del mismo, colores, materiales, costuras, etc. <br> El sol y calor del sur de España es uno de los mayores problemas que sufren los salpicaderos. Le ofrecemos el servicio completo de reparación del salpicadero que incluye la desinstalación e instalación, el tapizado con acabado igual al original que incluye costura especial airbag y logo (airbag estampado).
+                    Además tapizamos el salpicadero, paneles, puertas y revestimientos de su vehículo con el diseño, color y costura que más le guste para de esta forma darle un toque más personal a su coche.
+                </p>
+            </div>
+            <div class="contact-form">
+                <form id="presupuesto-form" action="#" method="post" target="_blank">
+
+                    <label for="servicio">¿Cuál de nuestros servicios te interesa? </label>
+                    <select name="servicio" id="servicio">
+                        <option value="t">Tapizado de techo</option>
+                        <option value="v">Volante</option> 
+                        <option value="s">Salpicadero</option>
+                        <option value="p">Puertas</option>
+                        <option value="a">Asientos</option>
+                        <option value="g">Tapiceria general</option>
+                    </select>
+
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" pattern="[A-Z a-z]{2,40}" title="Solo letras entre 2 y 40 caracteres" required>
+        
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" name="email" placeholder="Correo electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" title="Correo electronico no valido" required>
+    
+                    <label for="telephone">Telefono:</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Telefono" pattern="[0-9]{9}" title="Como minimo 9 caracteres" required>
+        
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+
+                    <input type="file" name="file" id="file">
+                    <label for="file"></label>
+
+                    <label for="aceptar">Acepto la politica de privacidad</label>
+                    <input type="checkbox" id="aceptar" name="aceptar" required>
+        
+                    <input type="submit" value="ENVIAR">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>© 2025 Tip Top Taller. <br>Todods los derechos reservados</p> 
+            <a href="#">Politica de privacidad</a>
+        </div>
+        <div>
+            <p class="p-footer"> CONTACTO:</p>
+            <p>C. Diamante, 37, 29603 Marbella, Málaga, España <br>(+34) 603 849 757 <br> tiptoptapiceria@gmail.com</p>
+        </div>
+        <div>
+            <div class="p-footer">
+            <p>SIGUENOS EN:</p>
+            </div>
+            <div class="redes">
+            <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
+            <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
+            <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

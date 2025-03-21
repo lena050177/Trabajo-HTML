@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", serif;
+}
+
+/* ---------------------------------------------------------------- -
+---------------------------------- Index -------------------------
+-------------------------------------------------------------------*/
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: rgb(199, 199, 199);
+}
+
+main {
+    min-height: 100vh;
+}
+
+/* ---------------------------------------------------------------- -
+---------------------------------- Header -------------------------
+-------------------------------------------------------------------*/ 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-image: linear-gradient(black, rgb(23, 23, 23), rgb(81, 81, 81));
+    font-size: .8em;
+    text-shadow: 1px 1px 3px black;
+    position: fixed;
+    min-width: 100%;
+    z-index: 20;
+}
+/*------------------------------------------------------------
+---------------------------- Logo ----------------------------
+------------------------------------------------------------*/
+.logo img {
+    width: 80px;
+    height: 80px;
+    background-color: black;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px rgb(171, 170, 170);
+}
+
+/* ---------------------------------------------------------------- -
+---------------------------------- Nav -------------------------
+-------------------------------------------------------------------*/
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    height: 100px;
+    font-size: clamp(15px, 2vw, 20px);
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+.nav-links a:hover {
+    color: rgb(192, 56, 7);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------- Menu hamburgesa -------------------------------
+-------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------*/
+.check-menu {
+    display: none;
+}
+.label-check {
+    display: none;
+}
+/* -----------------------------------------------------------------
+---------------------------------- Contacto -------------------------
+-------------------------------------------------------------------*/
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    color: white;  
+}
+.contacto p {
+    margin: 0;
+    justify-content: center; 
+}
+.contacto a {
+    color: white;
+    text-decoration: none;
+}
+.redes {
+    display: flex;
+    justify-content: center; 
+    padding: 10px;
+}
+.redes img {
+    width: 20px;
+    height: 20px;
+}
+/*--------------------------------------------------------------------
+--------------------------------------Main--------------------------- 
+--------------------------------------------------------------------*/
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: clamp(20px, 3vw, 30px)
+}
+h2 {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: clamp(15px, 2vw, 20px)
+}
+h3 {
+    font-size: 18px;
+    text-decoration: underline;
+    padding: 5px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.contenido {
+    width: 80%;
+    min-height: 100vh;
+    margin: 50px auto;
+    width: 100%;
+    padding: 20px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    color: rgb(192, 56, 7);
+    text-shadow: 1px 1px 3px black;
+    background: url(./../assets/images/inicio.webp) top/cover no-repeat;
+    
+}
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    text-align: center;
+    padding: 20px;
+    line-height: 50px;
+    background: rgba(0, 0, 0, 0.625);
+    border:rgba(0, 0, 0, 0.625);
+    border-radius: 10px;
+    font-size: clamp(15px, 2vw, 20px)
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.container li {
+    justify-content: center;
+    line-height: 50px;
+}
+.container p {
+    text-align: justify;
+    line-height: 30px;
+}
+/*---------------------------------------------------------- Galeria INDEX -------------------------------------------*/
+.galeria {
+    display: grid;
+    margin: 30px auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-around;
+    gap: 20px;
+    transition: all .3s ease;  
+}  
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(11, 11, 11);
+}
+.galeria img:hover {
+    transform: scale(2);
+}
+/* -------------------------------------------------------------
+----------------------- Formulario ------------------------
+----------------------------------------------------------------*/
+.contact-form {
+   display: flex;
+   flex-direction: column;
+   margin: 20px auto;
+   width: 100%;
+   height: 100vh;
+   padding: 20px;
+   height: auto;
+   background: rgb(205, 203, 203);
+   border: 5px double black;
+   border-radius: 5px;
+}
+.contact-form p {
+    text-align: center;
+    padding: 10px;
+}
+.contact-form label:not([for="aceptar"]) {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-form label[for=aceptar] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+.contact-form input, 
+.contact-form textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(205, 203, 203);
+    border-radius: 5px;
+}
+.contact-form input[type="submit"] {
+    display: block;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    width: 100px;
+    height: auto;
+    margin: 20px auto 20px auto;
+    padding: 10px 20px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+.contact-form input[type="submit"]:hover {
+    background-color: rgb(192, 56, 7);
+    border: 1px solid black;
+}
+.location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgba(31, 31, 31, 0.875);
+    border: black;
+    border-radius: 10px;
+}
+.location a {
+    text-decoration: none;
+    color: white;
+}
+.button-link {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    width: 160px;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: white;
+    border: 1px solid black; 
+}
+/* ------------------------------------------------------
+---------------------Footer------------------------------
+---------------------------------------------------------*/
+footer{
+    display: flex;
+    min-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(rgb(199, 199, 199), grey, black);
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px black ;
+    text-align: center;
+    line-height: 20px;
+    font-size: clamp(5px, 2vw, 12px);
+}  
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+footer a:hover {
+    color:  rgb(192, 56, 7);
+    text-decoration: underline;
+}
+/*-----------------------------------
+-----------------Pagina CONTACTO-------
+-------------------------------------*/
+hr {
+    width: 200px;
+    height: 2px;
+    margin: 10px;
+}
+
+.mapa {
+    width: 80%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.mapa p {
+    text-align: center;
+    padding: 20px;
+}
+.mapa iframe {
+    width: 100%;
+}
+/*---------------------------------------------------------- Pagina PRODUCTOS ---------------------------------------------------------*/
+.productos {
+    display: grid;
+    width: 95%;
+    margin: 30px auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: space-around;
+    gap: 20px;
+}
+.producto {
+    height: 300px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+}
+.producto:hover {
+    transform: translateY(-50px);
+    cursor: pointer;
+}
+.producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(11, 11, 11);
+    z-index: 9;
+}
+.descripcion {
+    background-color: rgba(255, 255, 255, 0.635);
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateY(-60px);
+}
+.producto:hover .descripcion {
+    transform: translateY(0px);
+}
+
+/*--------------------------------------------
+----------------- Responsive ------------------
+----------------------------------------------*/
+
+@media (max-width: 1024px) {
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+    .contacto {
+        display: none;
+    }
+    .label-check {
+        display: block; 
+        justify-content: center;
+        padding-right: 5px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 30%;
+        gap: 0;
+        width: 40%;
+        height: 200%;
+        border-radius: 10px;
+        background-color: rgba(11, 11, 11, 0.741);
+    }
+    .nav-links a {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 3px;
+    }
+    .check-menu:checked + .nav-links {
+        display: flex;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        
+    }  
+    .container ul {
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+    }  
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr) ;
+    }
+}    
+
+ @media (max-width: 768px) {
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .galeria img:hover {
+        transform:none;
+    }  
+    .producto {
+        height: 150px;
+        font-size: 10px;
+    }
+} 
+
+
+
+
+
