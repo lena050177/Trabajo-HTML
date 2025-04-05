@@ -195,7 +195,7 @@ section {
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 90%;
+    width: 95%;
     margin: 30px auto;
     justify-content: space-around;
     align-items: center;
@@ -239,7 +239,7 @@ section {
 .formulario1 {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     border: 5px double black;
@@ -452,7 +452,7 @@ hr {
 }
 .p-presupuesto {
    margin-bottom: 20px;
-   font-size: large;
+   font-size: clamp(17px, 3vw, 20px);
    text-align: center;
 }
 .formulario {
@@ -536,18 +536,23 @@ hr {
 }
 
 .presupuestoTotal {
-    position: relative;
-    display: flex;
+    position: relative;   
     margin: 0 auto;
     justify-content: center;
-    align-items: center;    
+    align-items: center;   
+    
+}
+.presupuestoTotal p {
+    font-size: clamp(16px, 2vw, 18px); 
+    font-weight: bold
 }
 .total {
-    border: 1px solid rgb(79, 79, 79); 
+    border: 1px solid rgb(95, 95, 95); 
     border-radius: 5px;
-    padding: 10px 100px;
+    padding: 1% 15%;
     text-align: center;
     font-weight: bold; 
+    font-size: clamp(13px, 2vw, 16px); 
 }
 .presupuestoNota {
     position: relative;
