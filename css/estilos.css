@@ -17,6 +17,7 @@ body {
 
 main {
     min-height: 100vh;
+    width: 100%;
 }
 
 /* ---------------------------------------------------------------- -
@@ -65,6 +66,7 @@ header {
     color: rgb(192, 56, 7);
     text-decoration: underline;
     font-weight: bold;
+    text-shadow: none;
 }
 
 /*--------------------------------------------------------------- Menu hamburgesa -------------------------------
@@ -99,11 +101,13 @@ header {
 .redes {
     display: flex;
     justify-content: center; 
-    padding: 10px;
+    gap: 10px;
+    padding: 5px;
 }
 .redes img {
     width: 20px;
     height: 20px;
+    box-shadow: 2px 2px 2px black;
 }
 /*--------------------------------------------------------------------
 --------------------------------------Main--------------------------- 
@@ -115,15 +119,33 @@ h1 {
     font-size: clamp(20px, 3vw, 30px)
 }
 h2 {
+    color: rgb(43, 43, 43);
+    font-family: "Red Hat Display", serif;
+    text-shadow: 1px 1px 1px rgb(59, 59, 59);
     text-align: center;
-    padding: 10px;
+    margin: 20px auto;
+    padding: 10px 20px;
     font-weight: bold;
-    font-size: clamp(15px, 2vw, 20px)
+    font-size: clamp(25px, 3vw, 35px);
 }
 h3 {
-    font-size: 18px;
-    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: clamp(18px, 2vw, 25px);
+}
+h4 {
+    margin: 20px auto;
+    text-align: center;
     padding: 5px;
+    font-size: clamp(16px, 2vw, 18px);
+    text-shadow: 3px 3px 3px black;
+}
+h5 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: clamp(16px, 2vw, 18px); 
 }
 section {
     display: flex;
@@ -134,7 +156,7 @@ section {
     min-height: 100vh;
 }
 .contenido {
-    width: 80%;
+    width: 95%;
     min-height: 100vh;
     margin: 50px auto;
     width: 100%;
@@ -147,9 +169,8 @@ section {
     width: 100%;
     justify-content: center;
     color: rgb(192, 56, 7);
-    text-shadow: 1px 1px 3px black;
-    background: url(./../assets/images/inicio.webp) top/cover no-repeat;
-    
+    text-shadow: 3px 3px 3px black;
+    background: url(./../assets/images/inicio.webp) top/cover no-repeat;   
 }
 .info {
     display: flex;
@@ -165,23 +186,31 @@ section {
 .info p {
     text-align: center;
 }
+.noticias {
+    width: 85%;
+    margin: 0 auto;
+    height: auto;
+    border: 2px solid rgb(31, 31, 31);
+}
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: 50% 50%;
     width: 90%;
-    margin: 10px auto;
+    margin: 30px auto;
     justify-content: space-around;
     align-items: center;
 }
-.container li {
+.servicios ul {
     justify-content: center;
-    line-height: 50px;
-    
+    margin-left: 40%;
+    align-items: center;
+    list-style: square;
+    line-height: 50px; 
 }
 .container p {
     text-align: justify;
     line-height: 30px;
+    font-size: clamp(13px, 2vw, 15px);
 }
 /*---------------------------------------------------------- Galeria INDEX -------------------------------------------*/
 .galeria {
@@ -204,67 +233,96 @@ section {
     transform: scale(2);
 }
 /* -------------------------------------------------------------
------------------------ Formulario ------------------------
+----------------------- Formulario contacto ------------------------
 ----------------------------------------------------------------*/
-.contact-form {
-   display: flex;
-   flex-direction: column;
-   margin: 20px auto;
-   width: 100%;
-   height: 100vh;
-   padding: 20px;
-   height: auto;
-   background: rgb(205, 203, 203);
-   border: 5px double black;
-   border-radius: 5px;
-}
-.contact-form p {
-    text-align: center;
-    padding: 10px;
-}
-.contact-form label:not([for="aceptar"]) {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-.contact-form label[for=aceptar] {
+
+.formulario1 {
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    font-size: 1em;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px double black;
+    border-radius: 10px;
+    line-height: 10px; 
+    background-color: rgba(249, 249, 249, 0.894); 
 }
-.contact-form input, 
-.contact-form textarea, select {
+.formulario1 fieldset {
+    border: 2px solid rgb(103, 103, 103);
+    padding: 10px 10px; 
+    margin: 10px auto;    
+}
+.formulario1 legend {
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+    font-size: clamp(16px, 3vw, 18px);
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 10px;
+}
+.datos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 20px auto;  
+}
+.datos input {
+    padding: 10px;
+    width: 80%; 
+    font-size: 15px;
+    border: 1px solid rgb(205, 203, 203);
+    border-radius: 5px;
+}
+.formulario1 input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 30px;
+    cursor: pointer; 
+}
+.formulario1 textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px;
+    font-size: 15px;
 }
-.contact-form input[type="submit"] {
-    display: block;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    width: 100px;
-    height: auto;
-    margin: 20px auto 20px auto;
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    margin: 20px auto 0 auto;
+    gap: 50px;   
+}
+.botones button {
+    font-size: clamp(15px, 2vw, 17px);
+    font-weight: bold;
     padding: 10px 20px;
-    border: none;
-    transition: all .3s ease-in-out;
+    border: 1px solid rgb(12, 12, 12);
+    border-radius: 5px;
+    background-color: rgb(135, 135, 135);
+    cursor: pointer;
 }
-.contact-form input[type="submit"]:hover {
+.botones button:hover {
     background-color: rgb(192, 56, 7);
+    color: white;
     border: 1px solid black;
 }
 .location {
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
     justify-content: center;
     align-items: center;
     color: white;
     gap: 10px;
-    padding-top: 20px;
+    padding: 30px;
     text-align: center;
-    background-color: rgba(31, 31, 31, 0.875);
+    background-color: rgba(63, 63, 63, 0.873);
     border: black;
     border-radius: 10px;
 }
@@ -287,10 +345,10 @@ section {
     font-weight: bolder;
     background-color: white;
     border: 1px solid black; 
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
 }
-/* ------------------------------------------------------
----------------------Footer------------------------------
----------------------------------------------------------*/
+/* ---------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------*/
 footer{
     display: flex;
     min-width: 100%;
@@ -315,18 +373,15 @@ footer a:hover {
     color:  rgb(192, 56, 7);
     text-decoration: underline;
 }
-/*-----------------------------------
------------------Pagina CONTACTO-------
--------------------------------------*/
+/*----------------------------------------------------Pagina CONTACTO--------------------------------------------*/
+
 hr {
     width: 200px;
     height: 2px;
     margin: 10px;
 }
-
 .mapa {
-    width: 80%;
-   
+    width: 95%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -334,10 +389,12 @@ hr {
 }
 .mapa p {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    font-size: clamp(13px, 2vw, 20px);
 }
 .mapa iframe {
     width: 100%;
+    margin: 30px auto;
 }
 /*---------------------------------------------------------- Pagina PRODUCTOS ---------------------------------------------------------*/
 .productos {
@@ -384,6 +441,168 @@ hr {
     transform: translateY(0px);
 }
 
+
+/*---------------------------------------------------------- Pagina PRESUPUESTO ---------------------------------------------------------*/
+.presupuesto {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;  
+}
+.p-presupuesto {
+   margin-bottom: 20px;
+   font-size: large;
+   text-align: center;
+}
+.formulario {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 5px double black;
+    border-radius: 5px;
+    line-height: 50px; 
+    background-color: rgba(249, 249, 249, 0.894); 
+}
+.formulario fieldset {
+    position: relative;
+    width: 100%;
+    border: 2px solid rgb(103, 103, 103);
+    padding: 10px 10px; 
+    margin: 30px auto;    
+}
+.formulario legend {
+    position: relative;
+    font-weight: bold;
+    color: rgb(54, 54, 54);
+    font-size: clamp(17px, 3vw, 20px);
+    margin: 0 20px;
+    padding: 0 10px;
+    line-height: 15px;
+}
+
+.servicio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+}
+.servicio select {
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(205, 203, 203);
+    border-radius: 5px; 
+    font-size: 15px;  
+}
+.plazo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 10px; 
+}
+.plazo input {
+    position: relative;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid rgb(205, 203, 203);
+    border-radius: 5px; 
+    font-size: 15px;  
+}
+.extras {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    gap: 5px;
+    line-height: 20px;
+}
+.extras input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 30px;
+    cursor: pointer; 
+}
+
+.presupuestoTotal {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;    
+}
+.total {
+    border: 1px solid rgb(79, 79, 79); 
+    border-radius: 5px;
+    padding: 10px 100px;
+    text-align: center;
+    font-weight: bold; 
+}
+.presupuestoNota {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(22, 22, 22); font-style: italic; 
+    margin: 20px 50px;
+}
+.aceptacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(14px, 2vw, 17px);
+    line-height: 20px;
+    list-style: none;
+    padding: 15px 0px 5px 0px;
+    gap: 10px;
+    color: black;  
+}
+.aceptacion input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 30px;
+    cursor: pointer; 
+}
+.error, .noSeleccionado {
+    color: rgb(238, 84, 7);
+    font-size: clamp(10px, 2vw, 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.invalido {
+    border-bottom: 3px solid rgb(238, 84, 7);
+    color: rgb(238, 84, 7);
+    font-weight: bold;
+}
+.mensaje {
+    color: green;
+    font-size: clamp(10px, 2vw, 15px);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
 /*--------------------------------------------
 ----------------- Responsive ------------------
 ----------------------------------------------*/
@@ -415,6 +634,7 @@ hr {
         height: 200%;
         border-radius: 10px;
         background-color: rgba(11, 11, 11, 0.741);
+        text-shadow: none;
     }
     .nav-links a {
         display: flex;
@@ -461,6 +681,21 @@ hr {
     .producto {
         height: 150px;
         font-size: 10px;
+    }
+    .formulario {
+        width: 100%;
+        padding: 10px;
+    }
+    .extras {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 90%;
+        margin: 20px auto;
+        gap: 20px;
+    }
+    .botones {
+        margin-bottom: 20px;
     }
 } 
 

@@ -20,7 +20,7 @@
 
             <nav class="nav-links">
                 <a href="./../index.html">Inicio</a>
-                <a href="./productos.html">Productos</a>
+                <a href="./galeria.html">Galería</a>
                 <a href="./presupuesto.html">Presupuesto</a>
                 <a href="./contacto.html">Contacto</a>  
             </nav>
@@ -47,48 +47,107 @@
             <p>SIEMPRE A SU DISPOSICIÓN</p>
             </div>  
         </section>
-        <section class="container">
-            <div>
-                <h2>Solicita su presupuesto sin compromiso</h2>
-                <p>El interior de los vehículos con el paso del tiempo y el uso sufre desgaste. Si este es su caso y lleva tiempo pensando en renovar el aspecto de su vehículo, le damos la solución que necesita con acabados de máxima calidad. </p>
-                <p>Somos especialistas en la renovación y el tapizado de todo el interior de su vehículo: asientos, volantes, salpicadero, puertas, alfombrillas, techos, etc</p>
-                <p>El volante es una pieza fundamental de nuestro vehículo y una de las que más se desgasta con el uso. Somos especialistas en el tapizado de todo tipo de volantes ofreciendo la posibilidad de modificar el diseño del mismo, colores, materiales, costuras, etc.</p> 
-                <p> El sol y calor del sur de España es uno de los mayores problemas que sufren los salpicaderos. Le ofrecemos el servicio completo de reparación del salpicadero que incluye la desinstalación e instalación, el tapizado con acabado igual al original que incluye costura especial airbag y logo (airbag estampado).</p>
-                <p>Además tapizamos el salpicadero, paneles, puertas y revestimientos de su vehículo con el diseño, color y costura que más le guste para de esta forma darle un toque más personal a su coche.
-                </p>
-            </div>
-            <div class="contact-form">
-                <form id="presupuesto-form" action="#" method="post" target="_blank">
-
-                    <label for="servicio">¿Cuál de nuestros servicios te interesa? </label>
-                    <select name="servicio" id="servicio">
-                        <option value="t">Tapizado de techo</option>
-                        <option value="v">Volante</option> 
-                        <option value="s">Salpicadero</option>
-                        <option value="p">Puertas</option>
-                        <option value="a">Asientos</option>
-                        <option value="g">Tapicería general</option>
-                    </select>
-
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" placeholder="Nombre" pattern="[A-Z a-z]{2,40}" title="Solo letras entre 2 y 40 caracteres" required>
         
-                    <label for="email">Correo electronico:</label>
-                    <input type="email" id="email" name="email" placeholder="Correo electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" title="Correo electronico no valido" required>
-    
-                    <label for="telephone">Teléfono:</label>
-                    <input type="tel" id="telephone" name="telephone" placeholder="Telefono" pattern="[0-9]{9}" title="Como minimo 9 caracteres" required>
-        
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea name="mensaje" id="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+        <section class="presupuesto" >
+            <h2>Presupuesto online</h2>
+            <p class="p-presupuesto">Rellena el siguiente formulario para obtener un presupuesto orientativo de los servicios que ofrecemos.</p>
+            <div class="formulario">
+                <form id="form" action="#" method="post" target="_blank">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <div class="datos">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" placeholder="Nombre completo" >         
+                        </div>
+                        <span class="error" id="nombreError"></span>
 
-                    <input type="file" name="file" id="file">
-                    <label for="file"></label>
+                        <div class="datos">
+                            <label for="apellido">Apellidos:</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos">   
+                        </div>
+                        <span class="error" id="apellidoError"></span>                        
+                        <div class="datos">
+                            <label for="telephone">Teléfono:</label>
+                            <input type="text" id="telephone" name="telephone" placeholder="Telefono">
+                        </div>
+                        <span class="error" id="telefonoError"></span>                        
+                        <div class="datos">
+                            <label for="email">Correo:</label>
+                            <input type="text" id="email" name="email" placeholder="Correo electronico"> 
+                        </div>
+                        <span class="error" id="emailError"></span>                 
+                    </fieldset>
 
-                    <label for="aceptar">Acepto la politica de privacidad</label>
-                    <input type="checkbox" id="aceptar" name="aceptar" required>
-        
-                    <input type="submit" value="ENVIAR">
+                    <fieldset>
+                        <legend>Presupuesto</legend>
+                        <div class="servicio">
+                            <label for="servicio">Elige un servicio </label>
+                            <select name="servicio" id="servicio">
+                                <option value="0" disabled selected>Selecciona una opción</option>
+                                <option id="techo" value="150" >Tapizado de techo - 150€</option>
+                                <option id="volante" value="200">Volante - 200€</option>
+                                <option id="salpicadero" value="250">Salpicadero - 250€</option>
+                                <option id="asiento" value="150">Asiento - 150€</option>
+                                <option id="puerta"  value="200">Puerta - 200€</option>
+                            </select>
+                            <span class="noSelected" id="noSelected"></span>
+                        </div>
+
+                        <div class="plazo">
+                            <label for="plazo">Elige un plazo de servicio para obtener descuento</label>
+                            <input type="number" id="plazo" name="plazo" placeholder="Plazo en dias" min="0" max="30" step="2">
+                        </div>
+                        
+                        <p>Elige extras para el servicio</p>
+                        <div class="extras">
+                            <input class="extras" type="checkbox" id="limpiezaInterior" name="limpiezaInterior" value="20">
+                            <label for="limpiezaInterior">Limpieza interior 20€</label>
+                            <input class="extras" type="checkbox" id="limpiezaTotal" name="limpiezaTotal" value="50">
+                            <label for="limpiezaTotal">Limpieza interior + exterior 50€</label>
+                            <input class="extras" type="checkbox" id="desinfeccion" name="desinfeccion" value="30">
+                            <label for="desinfeccion">Desinfección 30€</label>
+                        </div>
+                          
+                        <div class="presupuestoTotal">
+                            <p style="font-size: large; font-weight: bold;">Presupuesto calculado</p>
+
+                            <span class="total" id="total">0 €</span>
+
+                            <span style="color: rgb(51, 51, 51); font-style: italic; padding: 0 20px;"> no incl. IVA 21%</span>
+                        </div>
+
+                        <div class="presupuestoNota">
+                            <p>El precio es orientativo y puede variar dependiendo del estado del vehículo y el tipo de material elegido.</p>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Aceptacíon de presupuesto y condiciones</legend>
+                        <ul class="aceptacion">
+                            <li>
+                                <label id="aceptar"
+                                class="aceptar" 
+                                for="terminos">He leído y acepto las condiciones y importe de presupuesto</label>
+                            </li>
+                            <li>
+                                <input id="terminos"
+                                type="checkbox" name="aceptar">
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <ul class="botones">
+                        <li>
+                            <button type="submit" id="submit">Enviar
+                            </button>
+                        </li>
+                        <li>
+                            <button type="reset" id="reset">Borrar
+                            </button>
+                        </li>                     
+                    </ul>
+                    <p id="mensaje-error" class="error"></p>
+                    <p id="mensaje" class="mensaje"></p>
                 </form>
             </div>
         </section>
@@ -117,5 +176,6 @@
             </div>
         </div>
     </footer>
+    <script src="./../js/script.js"></script>
 </body>
 </html>
