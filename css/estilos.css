@@ -535,8 +535,7 @@ hr {
     cursor: pointer; 
 }
 
-.presupuestoTotal {
-    position: relative;   
+.presupuestoTotal { 
     margin: 0 auto;
     justify-content: center;
     align-items: center;   
@@ -544,7 +543,9 @@ hr {
 }
 .presupuestoTotal p {
     font-size: clamp(16px, 2vw, 18px); 
-    font-weight: bold
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0 50px 0 0;
 }
 .total {
     border: 1px solid rgb(95, 95, 95); 
