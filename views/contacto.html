@@ -79,26 +79,32 @@
                         <legend>Datos personales</legend>
                         <div class="datos">
                             <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" placeholder="Nombre completo">         
+                            <input type="text" id="name" name="name" placeholder="Nombre completo">
+                            <span>*</span>         
                         </div>
                         <span class="error" id="nombreError"></span> 
                         
                         <div class="datos">
                             <label for="apellido">Apellidos:</label>
                             <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos">   
+                            <span>*</span>
                         </div>
                         <span class="error" id="apellidoError"></span> 
 
                         <div class="datos">
                             <label for="telephone">Teléfono:</label>
                             <input type="text" id="telephone" name="telephone" placeholder="Telefono">
+                            <span>*</span>
                         </div>
-                        <span class="error" id="telefonoError"></span>                        
+                        <span class="error" id="telefonoError"></span> 
+
                         <div class="datos">
-                            <label for="email">Email:</label>
-                            <input type="text" id="email" name="email" placeholder="Correo electronico"> 
+                            <label for="email">E-mail:</label>
+                            <input type="text" id="email" name="email" placeholder="Correo electronico">
+                            <span>*</span> 
                         </div>
-                        <span class="error" id="emailError"></span>       
+                        <span class="error" id="emailError"></span>
+                        <span style="color: grey; font-style: italic;"> (*) Los campos marcados con asterisco son obligatorios.</span>       
                     </fieldset>
                     
                     <fieldset>

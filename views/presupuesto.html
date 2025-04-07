@@ -57,25 +57,32 @@
                         <legend>Datos personales</legend>
                         <div class="datos">
                             <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name" placeholder="Nombre completo" >         
+                            <input type="text" id="name" name="name" placeholder="Nombre completo " autocomplete="name"> 
+                            <span>*</span>        
                         </div>
                         <span class="error" id="nombreError"></span>
 
                         <div class="datos">
                             <label for="apellido">Apellidos:</label>
-                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos">   
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos">  
+                            <span>*</span> 
                         </div>
                         <span class="error" id="apellidoError"></span>                        
                         <div class="datos">
                             <label for="telephone">Teléfono:</label>
                             <input type="text" id="telephone" name="telephone" placeholder="Telefono">
+                            <span>*</span>
                         </div>
-                        <span class="error" id="telefonoError"></span>                        
+                        <span class="error" id="telefonoError"></span> 
+
                         <div class="datos">
-                            <label for="email">Correo:</label>
-                            <input type="text" id="email" name="email" placeholder="Correo electronico"> 
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="Correo electronico" autocomplete="email"> 
+                            <span>*</span>
                         </div>
-                        <span class="error" id="emailError"></span>                 
+                        <span class="error" id="emailError"></span>  
+                        
+                        <span style="color: grey; font-style: italic;"> (*) Los campos marcados con asterisco son obligatorios.</span> 
                     </fieldset>
 
                     <fieldset>
@@ -83,7 +90,7 @@
                         <div class="servicio">
                             <label for="servicio">Elige un servicio </label>
                             <select name="servicio" id="servicio">
-                                <option value="0" disabled selected>Selecciona una opción</option>
+                                <option value="0">Selecciona una opción</option>
                                 <option id="techo" value="150" >Tapizado de techo - 150€</option>
                                 <option id="volante" value="200">Volante - 200€</option>
                                 <option id="salpicadero" value="250">Salpicadero - 250€</option>
@@ -91,6 +98,7 @@
                                 <option id="puerta"  value="200">Puerta - 200€</option>
                             </select>
                             <span class="noSelected" id="noSelected"></span>
+                            
                         </div>
 
                         <div class="plazo">
@@ -107,13 +115,11 @@
                             <input class="extras" type="checkbox" id="desinfeccion" name="desinfeccion" value="30">
                             <label for="desinfeccion">Desinfección 30€</label>
                         </div>
-                          
+
                         <div class="presupuestoTotal">
-                            <p >Presupuesto calculado</p>
-
-                            <span class="total" id="total">0 €</span>
-
-                            <span style="color: rgb(51, 51, 51); font-style: italic; padding: 0 20px;"> no incl. IVA 21%</span>
+                            <label for="pTotal">Presupuesto calculado</label>
+                            <input type="text" class="total" id="pTotal" value="0 €">
+                            <span class="iva"> no incl. IVA 21%</span>
                         </div>
 
                         <div class="presupuestoNota">

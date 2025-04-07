@@ -5,10 +5,10 @@ const nameInput = document.getElementById("name");
 const apellidoInput = document.getElementById("apellido");
 const phoneInput = document.getElementById("telephone");
 const emailInput = document.getElementById("email");
-const aceptar = document.getElementById ("aceptar")
-const aceptarCheck = document.getElementById("terminos")
+const aceptar = document.getElementById ("aceptar");
+const aceptarCheck = document.getElementById("terminos");
 const form = document.getElementById("form");
-const buttonBorrar = document.getElementById("reset")
+const buttonBorrar = document.getElementById("reset");
 
 
 function resetForm() {
@@ -29,13 +29,12 @@ function resetForm() {
     document.getElementById("apellidoError").textContent = ""
     document.getElementById("telefonoError").textContent = ""
     document.getElementById("emailError").textContent = ""
-    document.getElementById
     aceptarCheck.checked = false      
 }
 
 function validarNombre() {
     const nombre = nameInput.value
-    const nombrePattern = /^[a-zA-Zñ]{1,15}$/
+    const nombrePattern = /^[a-zA-Zñ\s]{1,15}$/
     if (nombrePattern.test(nombre)) {
         nameInput.classList.add ("valido");
         nameInput.classList.remove("invalido")
@@ -48,7 +47,7 @@ function validarNombre() {
 
 function validarApellido() {
     const apellido = apellidoInput.value
-    const apellidoPattern = /^[a-zA-Zñ]{1,40}$/
+    const apellidoPattern = /^[a-zA-Zñ\s]{1,40}$/
     if (apellidoPattern.test(apellido)) {
         apellidoInput.classList.add("valido")
         apellidoInput.classList.remove("invalido")
@@ -56,7 +55,7 @@ function validarApellido() {
         }else {
         apellidoInput.classList.add("invalido")
             apellidoInput.classList.remove("valido")
-        document.getElementById("apellidoError").textContent = "Debe tener entre 1 y 40 caracteres solo letras"
+        document.getElementById("apellidoError").textContent = "Debe tener entre 1 y 40 caracteres y solo letras"
 }}
 
 function validarTelefono() {
@@ -100,6 +99,7 @@ nameInput.addEventListener("input", validarNombre);
 apellidoInput.addEventListener("input", validarApellido);
 phoneInput.addEventListener("input", validarTelefono);
 emailInput.addEventListener("input", validarEmail);
+aceptarCheck.addEventListener("input", validarAceptacion)
 
 form.addEventListener("submit", function(event) {
     event.preventDefault()
@@ -110,18 +110,20 @@ form.addEventListener("submit", function(event) {
     validarAceptacion()
 
     if (nameInput.classList.contains("valido") && apellidoInput.classList.contains("valido") && phoneInput.classList.contains("valido") && emailInput.classList.contains("valido") && aceptar.classList.contains("valido")){
-        aceptar.classList.remove("invalido")
+
         document.getElementById("mensaje").textContent = "Formulario enviado correctamente" 
         document.getElementById("mensaje-error").textContent = ""
+        setTimeout(() => {
+			document.getElementById('mensaje').textContent = ""
+		}, 5000)
         resetForm()
     } else {
-        aceptar.classList.add("invalido");
         document.getElementById("mensaje-error").textContent = "Por favor, corrija los errores en el formulario y acepta los terminos y condiciones"
         document.getElementById("mensaje").textContent = ""
     }
   });
 
-// Borrar formulario
+// ----------------------- Borrar formulario --------------------------
 
 buttonBorrar.addEventListener("click", function() {
     document.getElementById("mensaje").textContent = ""
@@ -132,25 +134,35 @@ buttonBorrar.addEventListener("click", function() {
 
 // Calculo de total del presupuesto 
 
-const servicioSelect = document.getElementById("servicio")
-const extrasCheckboxes = document.querySelectorAll(".extras")
+const servicioSelect = document.getElementById("servicio");
+const extrasCheckboxes = document.querySelectorAll(".extras");
 const plazo = document.getElementById("plazo");
-const elementoTotal = document.getElementById("total")
+const elementTotal = document.getElementById("pTotal")
 
 function calcularTotal() {
-    let total = 0
-    const precioSeleccionado = parseFloat(servicioSelect.value);
-   
-    total = precioSeleccionado;
 
-    elementoTotal.textContent = `${total.toFixed(2)}  €`;   
+    if (servicioSelect.value === "0") {
+            servicioSelect.classList.add("noSelected");
+            document.getElementById("noSelected").textContent = "No hay servicio seleccionado";
+        } else {
+            servicioSelect.classList.remove("noSelected");
+            document.getElementById("noSelected").textContent = "";   
+    }
+
+    const precioSeleccionado = parseFloat(servicioSelect.value);
+    let total = 0
+    
+    total = precioSeleccionado; 
+
+    elementTotal.value = `${total.toFixed(2)} €`
     
 // Se obtiene descuento por el plazo seleccionado y se suma al total
 
     const plazoSelect = Number(plazo.value);
     const discount = Number(precioSeleccionado - (plazoSelect * 0.5)); 
     total = discount;
-    elementoTotal.textContent = `${total.toFixed(2)}  €`;
+    
+    plazo.addEventListener("change", calcularTotal)
     
 // Sumar el precio de los extras seleccionados
   
@@ -158,8 +170,9 @@ function calcularTotal() {
     extrasSeleccionadas.forEach((checkbox) => {
         const precioExtra = checkbox.value;
         total += parseFloat(precioExtra);
-        elementoTotal.textContent = `${total.toFixed(2)}  €`;
     })
+
+    elementTotal.value = `${total.toFixed(2)} €`
 };
 
 // Se agrega los extras seleccionados al total
@@ -168,14 +181,18 @@ function calcularTotal() {
         checkbox.addEventListener("change", calcularTotal);
     })
 
-servicioSelect.addEventListener("change", calcularTotal)
-plazo.addEventListener("change", calcularTotal)
+    servicioSelect.addEventListener("change", calcularTotal)   
+    elementTotal.addEventListener("change", calcularTotal)
+
+    
+    
 
 buttonBorrar.addEventListener("click", function() {
-    document.getElementById("mensaje").textContent = ""
-    document.getElementById("mensaje-error").textContent = ""
-    elementoTotal.textContent = `
-    0  €`;
+    document.getElementById("mensaje").textContent = "";
+    document.getElementById("mensaje-error").textContent = "";
+    servicioSelect.classList.remove("noSelected");
+    document.getElementById("noSelected").textContent = ""; 
+    
     resetForm()   
     
 })
