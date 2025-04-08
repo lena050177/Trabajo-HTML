@@ -265,16 +265,22 @@ section {
     display: flex;
     justify-content: space-around;
     align-items:center;
-    
     margin: 20px auto;  
 }
 .datos input {
     padding: 10px;
-   
     width: 80%; 
     font-size: 15px;
     border: 1px solid rgb(205, 203, 203);
     border-radius: 5px;
+}
+.camposObligatorios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: grey; 
+    font-style: italic;
 }
 .formulario1 input[type="checkbox"] {
     width: 20px;
@@ -317,16 +323,18 @@ section {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 20px auto;
+    margin: 30px auto;
+    padding: 100px;
     justify-content: center;
     align-items: center;
     color: white;
-    gap: 10px;
-    padding: 30px;
     text-align: center;
     background-color: rgba(63, 63, 63, 0.873);
     border: black;
     border-radius: 10px;
+}
+.location p {
+    font-size: clamp(14px, 2vw, 18px)
 }
 .location a {
     text-decoration: none;
@@ -535,10 +543,11 @@ hr {
     display: flex;
     align-items: center;
     text-align: center;
-    line-height: 15px;
+    line-height: 25px;
     font-size: clamp(16px, 2vw, 18px); 
     font-weight: bold;
     margin: 50px auto; 
+    
 }
 .total {
     border: 1px solid rgb(95, 95, 95); 
@@ -562,8 +571,10 @@ hr {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(22, 22, 22); font-style: italic; 
-    margin: 20px 50px;
+    color: rgb(31, 31, 31); 
+    font-style: italic; 
+    line-height: 20px;
+    font-size: clamp(13px, 2vw, 17px); 
 }
 
 .aceptacion {
