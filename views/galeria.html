@@ -9,34 +9,26 @@
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
         </style>
     <link rel="stylesheet" href="./../css/estilos.css">
+    <link rel="stylesheet" href="./../css/lightbox.min.css">
 </head>
 <body> 
-    <header>  
+    <header class="navbar">  
         <div class="logo">
             <img src="./../assets/images/logotip.svg" alt="logo tiptop" width="200" height="200">
         </div>
-        <div>
+        <div class="navbar">
             <input type="checkbox" id="check-menu" class="check-menu">
 
-            <nav class="nav-links">
-                <a href="./../index.html">Inicio</a>
+            <div class="nav-links">
+                <a href="./../index.html" >Inicio</a>
                 <a href="./galeria.html">Galeria</a>
-                <a href="./presupuesto.html">Presupuesto</a>
+                <a href="./presupuesto.html" >Presupuesto</a>
                 <a href="./contacto.html">Contacto</a>  
-            </nav>
+            </div>
 
             <label for="check-menu" class="label-check">
                 <img src="./../assets/images/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
             </label>
-        </div>
-        <div class="contacto">
-            <p><img src="./../assets/images/whatsapp-logo.svg" alt="logo whatsapp" width="20" height="20">(+34) 603 849 757</p>
-            <a href="mailto:tiptoptapiceria@gmail.com">tiptoptapiceria@gmail.com</a>
-            <div class="redes">
-                <a href="https://www.facebook.com/tapiceriaMD.Marbella/" target="_blank"><img src="./../assets/images/facebook-logo.svg" alt="logo facebook" width="30" height="30"></a>
-                <a href="https://www.instagram.com/tiptop_marbella/" target="_blank"><img src="./../assets/images/instagram-logo.svg" alt="logo instagram" width="30" height="30"></a>
-                <a href="https://g.co/kgs/Lr5aoFv" target="_blank"><img src="./../assets/images/google-svgrepo.svg" alt="logo google" width="30" height="30"></a>
-            </div>
         </div>
     </header>
 
@@ -47,150 +39,196 @@
             <p>Servicios Tapicería de Vehículos</p>
             </div>  
         </section>
-
+       
         <section>
-            <h2>Trabajos Realizados</h2>
-            <div class="productos">
-                <div class="producto">
-                    <img src="./../assets/images/asientosporsche1.jpg" alt="restauracion de asientos" width="400" height="533">
-                    <div class="descripcion">
-                        <p>Restauración asientos</p>
+            <h2 class="text-top">Trabajos Realizados</h2>
+
+            <h3 class="text-servicio">Restauración asientos</h3>
+            <hr>
+            <div class="galeria">
+
+                <div class="image">
+                    <a href="./../assets/images/asientosporsche1.jpg" data-lightbox="galeria" data-title="Restauración asientos"><img src="./../assets/images/asientosporsche1.jpg" alt="Restauración de asientos Porsche"></a>
+                    <div class="descripcion" >
+                        <p>Restauración de asientos</p>
                     </div>
+                </div>    
+                    
+                <div class="image">
+                    <a href="./../assets/images/asientosporsche2.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/asientosporsche2.jpg" alt="Restauración de asientos Porsche"></a>
+                    <div class="descripcion">
+                        <p>Restauración de asientos</p>
+                    </div>
+                </div>
+                    
+                <div class="image">
+                    <a href="./../assets/images/asientosporsche3.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/asientosporsche3.jpg" alt="Restauración de asientos Porsche"></a>
+                    <div class="descripcion">
+                        <p>Restauración de asientos</p>
+                    </div> 
                 </div>   
-                <div class="producto">
-                    <img src="./../assets/images/asientosporsche2.jpg" alt="restauracion de asientos" width="400" height="533">
+                         
+                <div class="image">
+                    <a href="./../assets/images/asientosporsche4.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/asientosporsche4.jpg" alt="restauracion de asientos" width="400" height="300"></a>
+                    <div class="descripcion">
+                        <p>Restauración de asientos</p>
+                    </div>   
+                </div>
+
+                <div class="image">
+                    <a href="./../assets/images/reparacion-asiento.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/reparacion-asiento.jpg" alt="restauracion de asientos" width="400" height="449"></a>
                     <div class="descripcion">
                         <p>Restauración de asientos</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/asientosporsche3.jpg" alt="restauracion de asientos" width="400" height="286">
-                    <div class="descripcion">
-                    <p>Restauración de asientos</p>
-                    </div>
-                </div>          
-                <div class="producto">
-                    <img src="./../assets/images/asientosporsche4.jpg" alt="restauracion de asientos" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/asiento-reparado.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/asiento-reparado.jpg" alt="restauracion de asientos" width="400" height="622"></a>
                     <div class="descripcion">
                         <p>Restauración de asientos</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/reparacion-asiento.jpg" alt="restauracion de asientos" width="400" height="449">
+
+                <div class="image">
+                    <a href="./../assets/images/asiento-dnado1.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/asiento-dnado1.jpg" alt="restauracion de asientos" width="400" height="533"></a>
                     <div class="descripcion">
                         <p>Restauración de asientos</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/asiento-reparado.jpg" alt="restauracion de asientos" width="400" height="622">
-                    <div class="descripcion">
-                    <p>Restauración de asientos</p>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img src="./../assets/images/asiento-dnado1.jpg" alt="restauracion de asientos" width="400" height="533">
-                    <div class="descripcion">
-                            <p>Restauración de asientos</p>
-                    </div>
-                </div>
-                <div class="producto">
-                    <img src="./../assets/images/asiento-reparado1.jpg" alt="restauracion de asientos" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/asiento-reparado1.jpg" data-lightbox="galeria" data-title="Restauración de asientos"><img src="./../assets/images/asiento-reparado1.jpg" alt="restauracion de asientos" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Restauración de asientos</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/puertaporsche1.jpg" alt="restauracion de puertas" width="400" height="300">
+            </div>
+
+            <h3 class="text-servicio">Restauración de puertas</h3>
+            <hr>
+            <div class="galeria">
+
+                <div class="image">
+                    <a href="./../assets/images/puertaporsche1.jpg" data-lightbox="galeria" data-title="Restauración de puertas"><img src="./../assets/images/puertaporsche1.jpg" alt="restauracion de puertas" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Restauración de puertas</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/puertaporsche2.jpg" alt="restauracion de puertas" width="400" height="533">
+
+                <div class="image">
+                    <a href="./../assets/images/puertaporsche2.jpg" data-lightbox="galeria" data-title="Restauración de puertas"><img src="./../assets/images/puertaporsche2.jpg" alt="restauracion de puertas" width="400" height="533"></a>
                     <div class="descripcion">
                         <p>Restauración de puertas</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/puerta.jpg" alt="restauracion de puertas" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/puerta.jpg" data-lightbox="galeria" data-title="Restauración de puertas"><img src="./../assets/images/puerta.jpg" alt="restauracion de puertas" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Restauración de puertas</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/puerta-reparada.jpg" alt="restauracion de puertas" width="400" height="300">
+                <div class="image">
+                    <a href="./../assets/images/puerta-reparada.jpg" data-lightbox="galeria" data-title="Restauración de puertas"><img src="./../assets/images/puerta-reparada.jpg" alt="restauracion de puertas" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Restauración de puertas</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/volante1.jpg" alt="restauracion de volante" width="400" height="300">
+            </div>
+
+            <h3 class="text-servicio">Restauración de volantes</h3>
+            <hr>
+            <div class="galeria">
+
+                <div class="image">
+                    <a href="./../assets/images/volante1.jpg" data-lightbox="galeria" data-title="Restauración de volantes"><img src="./../assets/images/volante1.jpg" alt="restauracion de volante" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Restauración de volantes</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/volante2.jpg" alt="restauracion de volante" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/volante2.jpg" data-lightbox="galeria" data-title="Restauración de volantes"><img src="./../assets/images/volante2.jpg" alt="restauracion de volante" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Restauración de volantes</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/volante3.jpg" alt="restauracion de volante" width="400" height="400">
+
+                <div class="image">
+                    <a href="./../assets/images/volante3.jpg" data-lightbox="galeria" data-title="Restauración de volantes"><img src="./../assets/images/volante3.jpg" alt="restauracion de volante" width="400" height="400"></a>
                     <div class="descripcion">
                         <p>Restauración de volantes</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/volante4.jpg" alt="restauracion de volante" width="400" height="533">
+
+                <div class="image">
+                    <a href="./../assets/images/volante4.jpg" data-lightbox="galeria" data-title="Restauración de volantes"><img src="./../assets/images/volante4.jpg" alt="restauracion de volante" width="400" height="533"></a>
                     <div class="descripcion">
                         <p>Restauración de volantes</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/salpicadero-danado.jpg" alt="salpicadero" width="400" height="300">
+            </div>
+
+            <h3 class="text-servicio">Salpicadero</h3>
+            <hr>
+            <div class="galeria">
+
+                <div class="image">
+                    <a href="./../assets/images/salpicadero-danado.jpg" data-lightbox="galeria" data-title="Salpicadero"><img src="./../assets/images/salpicadero-danado.jpg" alt="salpicadero" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Salpicadero</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/salpicadero-reparado.jpg" alt="salpicadero" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/salpicadero-reparado.jpg" data-lightbox="galeria" data-title="Salpicadero"><img src="./../assets/images/salpicadero-reparado.jpg" alt="salpicadero" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Salpicadero</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/salpicadero.jpg" alt="salpicadero" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/salpicadero.jpg" data-lightbox="galeria" data-title="Salpicadero"><img src="./../assets/images/salpicadero.jpg" alt="salpicadero" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Salpicadero</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/salpicadero1.jpg" alt="salpicadero" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/salpicadero1.jpg" data-lightbox="galeria" data-title="Salpicadero"><img src="./../assets/images/salpicadero1.jpg" alt="salpicadero" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Salpicadero</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/asientos-barco.jpg" alt="tapiceria de barcos" width="400" height="300">
+            </div>
+
+            <h3 class="text-servicio">Tapicería de barcos y techos</h3>
+            <hr>
+            <div class="galeria">
+
+                <div class="image">
+                    <a href="./../assets/images/asientos-barco.jpg" data-lightbox="galeria" data-title="Tapicería de barcos"><img src="./../assets/images/asientos-barco.jpg" alt="tapiceria de barcos" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Tapicería de barcos</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/asientos-barco2.jpg" alt="tapiceria de barcos" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/asientos-barco2.jpg" data-lightbox="galeria" data-title="Tapicería de barcos"><img src="./../assets/images/asientos-barco2.jpg" alt="tapiceria de barcos" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Tapicería de barcos</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/techo.jpg" alt="techo" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/techo.jpg" data-lightbox="galeria" data-title="Tapicería de barcos"><img src="./../assets/images/techo.jpg" alt="techo" width="400" height="300"></a>
                     <div class="descripcion">
                             <p>Techo</p>
                     </div>
                 </div>
-                <div class="producto">
-                    <img src="./../assets/images/techo2.jpg" alt="techo" width="400" height="300">
+
+                <div class="image">
+                    <a href="./../assets/images/techo2.jpg" data-lightbox="galeria" data-title="Tapicería de barcos"><img src="./../assets/images/techo2.jpg" alt="techo" width="400" height="300"></a>
                     <div class="descripcion">
                         <p>Techo</p>
                     </div>
@@ -222,6 +260,7 @@
             </div>
         </div>
     </footer>
-    <script src="./../js/script.js"></script>
+    <script src="./../js/lightbox-plus-jquery.js"></script>
+    <script src="./../js/galeria.js"></script>
 </body>
 </html>

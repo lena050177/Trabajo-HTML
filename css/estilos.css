@@ -27,40 +27,58 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
-    background-image: linear-gradient(black, rgb(23, 23, 23), rgb(81, 81, 81));
+    margin: 0 auto;
+    padding: 20px;
+    backdrop-filter:blur(3px);
+    filter: drop-shadow(0px 8px 4px rgba(0,0,0,1));
     font-size: .8em;
-    text-shadow: 1px 1px 3px black;
     position: fixed;
     min-width: 100%;
     z-index: 20;
+    transition: all 0.8s ease-in-out;
+}
+
+header.nav-scroll {
+    padding: 10px;
+    background-color: rgba(23, 23, 23, 0.921);
+    text-shadow: 1px 1px 1px rgb(164, 164, 164);
+    filter: drop-shadow(0px 8px 4px rgba(0,0,0,1));
+    transition: all 0.8s ease-in-out;
 }
 /*------------------------------------------------------------
 ---------------------------- Logo ----------------------------
 ------------------------------------------------------------*/
+.logo {
+    margin-left: 30px;
+}
 .logo img {
-    width: 80px;
-    height: 80px;
-    background-color: black;
+    width: 100px;
+    height: 100px;
     border-radius: 100px;
     box-shadow: 5px 5px 5px rgb(171, 170, 170);
 }
-
 /* ---------------------------------------------------------------- -
 ---------------------------------- Nav -------------------------
 -------------------------------------------------------------------*/
 .nav-links {
     display: flex;
+    margin-right: 50px;
     justify-content: center;
     align-items: center;
-    list-style: none;
-    gap: 50px;
-    height: 100px;
-    font-size: clamp(15px, 2vw, 20px);
+    gap: 30px;
+    padding: 20px;
+    
+    font-size: clamp(15px, 2vw, 20px);  
+    font-weight: bold; 
+    background-color: rgba(23, 23, 23, 0.563);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
 }
 .nav-links a {
-    color: white;
     text-decoration: none;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
 }
 .nav-links a:hover {
     color: rgb(192, 56, 7);
@@ -81,34 +99,7 @@ header {
 /* -----------------------------------------------------------------
 ---------------------------------- Contacto -------------------------
 -------------------------------------------------------------------*/
-.contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 5px;
-    color: white;  
-}
-.contacto p {
-    margin: 0;
-    justify-content: center; 
-}
-.contacto a {
-    color: white;
-    text-decoration: none;
-}
-.redes {
-    display: flex;
-    justify-content: center; 
-    gap: 10px;
-    padding: 5px;
-}
-.redes img {
-    width: 20px;
-    height: 20px;
-    box-shadow: 2px 2px 2px black;
-}
+
 /*--------------------------------------------------------------------
 --------------------------------------Main--------------------------- 
 --------------------------------------------------------------------*/
@@ -116,7 +107,7 @@ h1 {
     text-align: center;
     padding: 20px;
     font-weight: bold;
-    font-size: clamp(20px, 3vw, 30px)
+    font-size: clamp(20px, 3vw, 40px)
 }
 h2 {
     color: rgb(43, 43, 43);
@@ -148,12 +139,19 @@ h5 {
     font-size: clamp(16px, 2vw, 18px); 
 }
 section {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    min-height: 100vh;
+    gap: 20px;
+}
+
+.text-top.show {
+    text-shadow: 2px 2px 2px rgb(94, 94, 94);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
 }
 .contenido {
     width: 95%;
@@ -170,7 +168,10 @@ section {
     justify-content: center;
     color: rgb(192, 56, 7);
     text-shadow: 3px 3px 3px black;
-    background: url(./../assets/images/inicio.webp) top/cover no-repeat;   
+    background: url(./../assets/images/inicio.webp) top/cover no-repeat;  
+    mask-image: linear-gradient(rgba(190,190,190,1) 90%, transparent);
+    filter: drop-shadow(0px 8px 4px rgba(190,190,190,1));
+    border-bottom: 3px solid rgba(190,190,190,1);
 }
 .info {
     display: flex;
@@ -213,7 +214,7 @@ section {
     font-size: clamp(13px, 2vw, 15px);
 }
 /*---------------------------------------------------------- Galeria INDEX -------------------------------------------*/
-.galeria {
+.foto {
     display: grid;
     margin: 30px auto;
     grid-template-columns: repeat(3, 1fr);
@@ -222,14 +223,14 @@ section {
     gap: 20px;
     transition: all .3s ease;  
 }  
-.galeria img {
+.foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(11, 11, 11);
 }
-.galeria img:hover {
+.foto img:hover {
     transform: scale(2);
 }
 /* -------------------------------------------------------------
@@ -319,6 +320,82 @@ section {
     color: white;
     border: 1px solid black;
 }
+
+/*------------------------------- Botón WhatsApp ---------------------------------- */
+
+.whatsapp {
+    position: fixed;
+    bottom: 120px;
+    right: 5px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 30px;
+    background-color: rgba(34, 34, 34, 0.893);
+    font-weight: bold;
+    font-size: clamp(13px, 2vw, 17px);
+}
+.whatsapp a {
+    text-decoration: none;
+    color: white;
+}
+/* ---------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------*/
+footer{
+    display: grid;
+    min-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background-image: linear-gradient(rgb(199, 199, 199), grey, black);
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px black ;
+    text-align: center;
+    line-height: 20px;
+    font-size: clamp(5px, 2vw, 17px);
+}  
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+footer a:hover {
+    color:  rgb(192, 56, 7);
+    text-decoration: underline;
+}
+.redes {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    padding: 5px;
+}
+.redes img {
+    width: 30px;
+    height: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+/*----------------- Pagina CONTACTO --------------------------------------------*/
+
+.contacto {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    color: white;  
+}
+.contacto p {
+    margin: 0;
+    justify-content: center; 
+}
+.contacto a {
+    color: white;
+    text-decoration: none;
+}
 .location {
     display: flex;
     flex-direction: column;
@@ -329,7 +406,7 @@ section {
     align-items: center;
     color: white;
     text-align: center;
-    background-color: rgba(63, 63, 63, 0.873);
+    background-color: rgba(14, 14, 14, 0.873);
     border: black;
     border-radius: 10px;
 }
@@ -358,32 +435,6 @@ section {
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
 }
-/* ---------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------*/
-footer{
-    display: flex;
-    min-width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-image: linear-gradient(rgb(199, 199, 199), grey, black);
-    color: white;
-    font-weight: bolder;
-    text-shadow: 1px 1px 3px black ;
-    text-align: center;
-    line-height: 20px;
-    font-size: clamp(5px, 2vw, 12px);
-}  
-footer a {
-    color: white;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-}
-footer a:hover {
-    color:  rgb(192, 56, 7);
-    text-decoration: underline;
-}
-/*----------------------------------------------------Pagina CONTACTO--------------------------------------------*/
 
 hr {
     width: 200px;
@@ -407,50 +458,65 @@ hr {
     margin: 30px auto;
 }
 /*---------------------------------------------------------- Pagina GALERIA ---------------------------------------------------------*/
-.productos {
-    display: grid;
-    width: 95%;
-    margin: 30px auto;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    justify-content: space-around;
-    gap: 20px;
-}
-.producto {
-    height: 300px;
-    display: grid;
-    grid-template-rows: 80% 20%;
-    text-align: center;
-    font-weight: bold;
-    opacity: 1;
-}
-.producto:hover {
-    transform: translateY(-50px);
-    cursor: pointer;
-}
-.producto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    box-shadow: 5px 5px 5px rgb(11, 11, 11);
-    z-index: 9;
-}
-.descripcion {
-    background-color: rgba(255, 255, 255, 0.635);
-    padding: 10px;
-    border-radius: 5px;
-    transform: translateY(-60px);
-}
-.descripcion p {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.producto:hover .descripcion {
-    transform: translateY(0px);
+
+.text-servicio {
+    text-shadow: 5px 2px 3px black;
+    color: white;
+    font-size: 30px; 
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    
 }
 
+.text-servicio.show {
+    transform: scale(1);
+    opacity: 1;
+}
+.galeria {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.image {
+    width: 310px;
+    height: 280px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgb(11, 11, 11);
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out; 
+    opacity: 0;    
+}
+.image.show {
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;  
+    opacity: 1; 
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 20px;
+}
+.image:hover {
+    filter: grayscale(1);
+    cursor: pointer;  
+}
+.descripcion {
+    background-color: rgba(255, 255, 255, 0.718);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transform: translateY(-130px);
+    opacity: 0;   
+}
+.descripcion:hover {
+    opacity: 1;
+}
 
 /*---------------------------------------------------------- Pagina PRESUPUESTO ---------------------------------------------------------*/
 .presupuesto {
@@ -491,7 +557,6 @@ hr {
     padding: 0 10px;
     line-height: 15px;
 }
-
 .servicio {
     display: flex;
     flex-direction: column;
@@ -538,7 +603,6 @@ hr {
     margin: 0 30px;
     cursor: pointer; 
 }
-
 .presupuestoTotal {
     display: flex;
     align-items: center;
@@ -546,8 +610,7 @@ hr {
     line-height: 25px;
     font-size: clamp(16px, 2vw, 18px); 
     font-weight: bold;
-    margin: 50px auto; 
-    
+    margin: 50px auto;    
 }
 .total {
     border: 1px solid rgb(95, 95, 95); 
@@ -576,7 +639,6 @@ hr {
     line-height: 20px;
     font-size: clamp(13px, 2vw, 17px); 
 }
-
 .aceptacion {
     display: flex;
     flex-direction: column;
@@ -626,16 +688,19 @@ hr {
 @media (max-width: 1024px) {
 
     .logo img {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
     .contacto {
         display: none;
     }
     .label-check {
         display: block; 
+        margin: 0 auto;
         justify-content: center;
-        padding-right: 5px;
+        padding: 7px;
+        background-color: rgba(0, 0, 0, 0.915);
+        border-radius: 100px;
     }
 
     .nav-links {
@@ -670,11 +735,7 @@ hr {
         margin: 0 auto;
         align-items: center;
     }  
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(8, 1fr) ;
-    }
+    
     .descripcion {
         background: none;
     }
@@ -693,10 +754,19 @@ hr {
     }
     .galeria img:hover {
         transform:none;
-    }  
+    } 
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(24, 1fr);
+        gap: 10px;
+    }
     .producto {
-        height: 150px;
-        font-size: 10px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+  
     }
     .formulario {
         width: 100%;
@@ -713,7 +783,7 @@ hr {
     .botones {
         margin-bottom: 20px;
     }
-} 
+
 
 
 

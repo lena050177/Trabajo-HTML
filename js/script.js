@@ -1,5 +1,20 @@
+//-------------------- Scroll de header ----------
 
-// Validacion de datos personales
+const navbar = document.querySelector (".navbar")
+
+function scrollNavbar () {
+
+    if (window.scrollY < 300) {
+        navbar.classList.remove ("nav-scroll")
+    } else {
+        navbar.classList.add ("nav-scroll")
+    }
+};
+
+window.addEventListener ("scroll", scrollNavbar )
+
+
+// ------------------------------ Validacion datos personales
 
 const nameInput = document.getElementById("name");
 const apellidoInput = document.getElementById("apellido");
@@ -132,7 +147,7 @@ buttonBorrar.addEventListener("click", function() {
     
 })
 
-// Calculo de total del presupuesto 
+// ---------------------------- Calculo de total del presupuesto -----------------------------
 
 const servicioSelect = document.getElementById("servicio");
 const extrasCheckboxes = document.querySelectorAll(".extras");
@@ -181,7 +196,7 @@ function calcularTotal() {
         checkbox.addEventListener("change", calcularTotal);
     })
 
-    servicioSelect.addEventListener("change", calcularTotal)   
+    servicioSelect.addEventListener("change", calcularTotal)  
     elementTotal.addEventListener("change", calcularTotal)
 
     
@@ -196,3 +211,5 @@ buttonBorrar.addEventListener("click", function() {
     resetForm()   
     
 })
+
+
