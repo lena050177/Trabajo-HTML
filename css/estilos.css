@@ -460,8 +460,8 @@ hr {
 /*---------------------------------------------------------- Pagina GALERIA ---------------------------------------------------------*/
 
 .text-servicio {
-    text-shadow: 5px 2px 3px black;
-    color: white;
+    text-shadow: 1px 1px 1px black;
+    color: rgb(204, 56, 3);
     font-size: 30px; 
     transform: scale(0.5);
     opacity: 0;
