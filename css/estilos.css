@@ -5,17 +5,10 @@
     font-family: "Red Hat Display", serif;
 }
 
-/* ---------------------------------------------------------------- -
----------------------------------- Index -------------------------
--------------------------------------------------------------------*/
-
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     background-color: rgb(199, 199, 199);
-}
-
-main {
     min-height: 100vh;
     width: 100%;
 }
@@ -24,67 +17,68 @@ main {
 ---------------------------------- Header -------------------------
 -------------------------------------------------------------------*/ 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 20px;
-    backdrop-filter:blur(3px);
-    filter: drop-shadow(0px 8px 4px rgba(0,0,0,1));
-    font-size: .8em;
     position: fixed;
+    display: flex;
+    z-index: 10;
     min-width: 100%;
-    z-index: 20;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px auto;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.403);
+    filter: drop-shadow(0px 8px 4px rgba(0,0,0,1));
     transition: all 0.8s ease-in-out;
 }
 
 header.nav-scroll {
-    padding: 10px;
-    background-color: rgba(23, 23, 23, 0.921);
-    text-shadow: 1px 1px 1px rgb(164, 164, 164);
-    filter: drop-shadow(0px 8px 4px rgba(0,0,0,1));
+    background-color: black;
+    filter: drop-shadow(0px 8px 4px rgb(23, 23, 23));
     transition: all 0.8s ease-in-out;
 }
-/*------------------------------------------------------------
----------------------------- Logo ----------------------------
-------------------------------------------------------------*/
+
 .logo {
-    margin-left: 30px;
+    width: 130px;
+    height: 110px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(171, 170, 170);
+    object-fit: cover;
 }
-.logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    box-shadow: 5px 5px 5px rgb(171, 170, 170);
+
+h1 {
+    padding-left: 100px;
+    font-size: clamp(20px, 3vw, 50px);
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 5px;
 }
 /* ---------------------------------------------------------------- -
----------------------------------- Nav -------------------------
+---------------------------------- Navbar -------------------------
 -------------------------------------------------------------------*/
 .nav-links {
     display: flex;
-    margin-right: 50px;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 20px;
-    
-    font-size: clamp(15px, 2vw, 20px);  
-    font-weight: bold; 
-    background-color: rgba(23, 23, 23, 0.563);
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px black;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    font-size: 17px;  
 }
-.nav-links a {
+.nav-links a {  
     text-decoration: none;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-    color: white;
-    font-weight: bold;
+    color: white;  
 }
 .nav-links a:hover {
     color: rgb(192, 56, 7);
     text-decoration: underline;
     font-weight: bold;
     text-shadow: none;
+}
+hr {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100px;
+    height: 2px;
+    margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------- Menu hamburgesa -------------------------------
@@ -96,75 +90,51 @@ header.nav-scroll {
 .label-check {
     display: none;
 }
-/* -----------------------------------------------------------------
----------------------------------- Contacto -------------------------
--------------------------------------------------------------------*/
-
 /*--------------------------------------------------------------------
 --------------------------------------Main--------------------------- 
 --------------------------------------------------------------------*/
-h1 {
+h2 {
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: clamp(20px, 3vw, 35px);
+}
+
+h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+h3 {
+    color: black;
+    text-shadow: 1px 1px 1px rgb(59, 59, 59);
     text-align: center;
     padding: 20px;
     font-weight: bold;
-    font-size: clamp(20px, 3vw, 40px)
-}
-h2 {
-    color: rgb(43, 43, 43);
-    font-family: "Red Hat Display", serif;
-    text-shadow: 1px 1px 1px rgb(59, 59, 59);
-    text-align: center;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: clamp(25px, 3vw, 35px);
-}
-h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: clamp(18px, 2vw, 25px);
-}
-h4 {
-    margin: 20px auto;
-    text-align: center;
-    padding: 5px;
-    font-size: clamp(16px, 2vw, 18px);
-    text-shadow: 3px 3px 3px black;
-}
-h5 {
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: clamp(16px, 2vw, 18px); 
-}
-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    font-size: clamp(18px, 2vw, 35px);
 }
 
+h4 {
+    text-align: center;
+    padding: 10px;
+    font-size: clamp(18px, 2vw, 20px);
+    font-weight: bold;
+}
 .text-top.show {
     text-shadow: 2px 2px 2px rgb(94, 94, 94);
     transition: all 0.3s ease-in-out;
     transform: scale(1.2);
 }
 .contenido {
-    width: 95%;
+    width: 90%;
+    margin: 0 auto;
     min-height: 100vh;
-    margin: 50px auto;
-    width: 100%;
-    padding: 20px;
 }
 .hero {
     display: flex;
     flex-direction: column;
+    margin: 30px auto ;
     min-height: 100vh;
-    width: 100%;
     justify-content: center;
     color: rgb(192, 56, 7);
     text-shadow: 3px 3px 3px black;
@@ -176,63 +146,17 @@ section {
 .info {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
     line-height: 50px;
     background: rgba(0, 0, 0, 0.625);
-    border:rgba(0, 0, 0, 0.625);
     border-radius: 10px;
     font-size: clamp(15px, 2vw, 20px)
 }
-.info p {
-    text-align: center;
-}
-.noticias {
-    width: 85%;
-    margin: 0 auto;
-    height: auto;
-    border: 2px solid rgb(31, 31, 31);
-}
-.container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 95%;
-    margin: 30px auto;
-    justify-content: space-around;
-    align-items: center;
-}
-.servicios ul {
-    justify-content: center;
-    margin-left: 40%;
-    align-items: center;
-    list-style: square;
-    line-height: 50px; 
-}
-.container p {
-    text-align: justify;
-    line-height: 30px;
-    font-size: clamp(13px, 2vw, 15px);
-}
-/*---------------------------------------------------------- Galeria INDEX -------------------------------------------*/
-.foto {
-    display: grid;
-    margin: 30px auto;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: space-around;
-    gap: 20px;
-    transition: all .3s ease;  
-}  
-.foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(11, 11, 11);
-}
-.foto img:hover {
-    transform: scale(2);
-}
+
 /* -------------------------------------------------------------
 ----------------------- Formulario contacto ------------------------
 ----------------------------------------------------------------*/
@@ -240,9 +164,9 @@ section {
 .formulario1 {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     border: 5px double black;
     border-radius: 10px;
     line-height: 10px; 
@@ -321,25 +245,34 @@ section {
     border: 1px solid black;
 }
 
+.direccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(15px, 2vw, 20px);
+
+}
+
+/* ------------------------------------------------------- NOTICIAS ------------------------------------------- */
+.noticias {
+    width: 85%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: white;
+    border: 2px solid rgb(31, 31, 31);
+}
+
 /*------------------------------- Botón WhatsApp ---------------------------------- */
 
 .whatsapp {
     position: fixed;
     bottom: 120px;
     right: 5px;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    border: 5px solid white;
-    border-radius: 30px;
-    background-color: rgba(34, 34, 34, 0.893);
-    font-weight: bold;
-    font-size: clamp(13px, 2vw, 17px);
 }
-.whatsapp a {
-    text-decoration: none;
-    color: white;
-}
+
+
 /* ---------------------------------------------------------------------------Footer---------------------------------------------------------------------------------------*/
 footer{
     display: grid;
@@ -351,11 +284,11 @@ footer{
     gap: 50px;
     background-image: linear-gradient(rgb(199, 199, 199), grey, black);
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
     text-shadow: 1px 1px 3px black ;
     text-align: center;
-    line-height: 20px;
-    font-size: clamp(5px, 2vw, 17px);
+    line-height: 30px;
+    font-size: clamp(10px, 2vw, 17px);
 }  
 footer a {
     color: white;
@@ -379,94 +312,73 @@ footer a:hover {
 }
 /*----------------- Pagina CONTACTO --------------------------------------------*/
 
-.contacto {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
+.container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 20px auto;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
-    gap: 5px;
-    color: white;  
-}
-.contacto p {
-    margin: 0;
-    justify-content: center; 
-}
-.contacto a {
-    color: white;
-    text-decoration: none;
 }
 .location {
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin: 30px auto;
-    padding: 100px;
+    padding: 30px 80px;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     color: white;
     text-align: center;
-    background-color: rgba(14, 14, 14, 0.873);
+    background-color: rgb(35, 35, 35);
     border: black;
     border-radius: 10px;
+    box-shadow: 3px 2px 3px black;
 }
 .location p {
-    font-size: clamp(14px, 2vw, 18px)
+    font-size: clamp(14px, 2vw, 18px);
+    text-align: center;
+    line-height: 35px;
 }
 .location a {
     text-decoration: none;
     color: white;
+    font-size: clamp(14px, 2vw, 18px);
 }
 .button-link {
     display: flex;
     justify-content: center;
-    margin: 30px;
-    align-items: center;
-    text-transform: uppercase;
+    margin-top: 20px;
+    align-items: center;   
     text-align: center;
     width: 160px;
     height: 50px;
     text-decoration: none;
     color: black;
-    font-size: 15px;
-    font-weight: bolder;
+    font-size: 13px;
+    font-weight: bold;
     background-color: white;
     border: 1px solid black; 
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
 }
-
-hr {
-    width: 200px;
-    height: 2px;
-    margin: 10px;
-}
-.mapa {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+iframe {
+    width: 85%;
+    margin: 0px auto;
+    justify-content: center;
     align-items: center;
-}
-.mapa p {
-    text-align: center;
-    padding: 30px;
-    font-size: clamp(13px, 2vw, 20px);
-}
-.mapa iframe {
-    width: 100%;
-    margin: 30px auto;
+    margin-left: 8%;
 }
 /*---------------------------------------------------------- Pagina GALERIA ---------------------------------------------------------*/
 
 .text-servicio {
-    text-shadow: 1px 1px 1px black;
-    color: rgb(204, 56, 3);
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 2px 2px 2px white;
+    padding: 50px;
     font-size: 30px; 
     transform: scale(0.5);
     opacity: 0;
-    transition: all 0.5s ease-in-out;
-    
+    transition: all 0.5s ease-in-out;   
 }
 
 .text-servicio.show {
@@ -474,12 +386,12 @@ hr {
     opacity: 1;
 }
 .galeria {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    max-width: 90%;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 50px;
+    margin: 0 auto;
+    gap: 20px;  
 }
 .image {
     width: 310px;
@@ -528,6 +440,7 @@ hr {
 }
 .p-presupuesto {
    margin-bottom: 20px;
+   padding: 20px;
    font-size: clamp(17px, 3vw, 20px);
    text-align: center;
 }

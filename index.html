@@ -13,77 +13,55 @@
 </head>
 <body> 
     <header class="navbar">  
-        <div class="logo">
-            <img src="./assets/images/icons/logotip.svg" alt="logo tiptop" width="200" height="200">
-        </div>
+        <img class="logo" src="./assets/images/icons/logotip.svg" alt="logo tiptop" width="200" height="200">
+
+        <h1>TAPICERÍA AUTOMÓVIL</h1>
+
         <div class="navbar">
             <input type="checkbox" id="check-menu" class="check-menu">
-
-            <div class="nav-links">
-                <a href="./index.html" >Inicio</a>
-                <a href="./views/galeria.html">Galeria</a>
-                <a href="./views/presupuesto.html" >Presupuesto</a>
-                <a href="./views/contacto.html">Contacto</a>  
-            </div>
-
-            <label for="check-menu" class="label-check">
-                <img src="./assets/images/icons/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
-            </label>
         </div>
+
+        <div class="nav-links">
+            <a href="./index.html" >INICIO</a>              
+             <a href="./views/galeria.html">GALERÍA</a>               
+            <a href="./views/presupuesto.html" >PRESUPUESTO</a>            
+            <a href="./views/contacto.html">CONTACTO</a> 
+        </div>            
+
+        <label for="check-menu" class="label-check">
+            <img src="./assets/images/icons/menu-svgrepo-com.svg" alt="icono menu hamburgesa" width="50" height="50">
+        </label>
+        
     </header>
 
     <main>
-        <section class= "contenido hero">
+        <section class="hero">
             <div class="info">
-                <h1>Restauración y personalización  <br> para una experiencia única al volante</h1>
+                <h2>RESTAURACIÓN Y PERSONALIZACIÓN <br> PARA UNA EXPERIENCIA ÚNICA AL VOLANTE</h2>
                 <p>Nos dedicamos a la restauración y mejora de vehículos de todas las épocas,</p>
                 <p> desde clásicos hasta modelos recientes.</p>
                 <p>Ofrecemos soluciónes de tapizado y restauración con materiales de la más alta calidad.</p> 
                 <p> Nuestro compromiso es devolverle a tu vehículo el confort, la estética y la elegancia que se merece.</p>
             </div>
         </section>
+   
+        <section class="contenido">
+            <h2> 
+                <a href="./views/galeria.html">Nuestros Servicios</a>
+            </h2> 
+            <hr>          
+            <div class="servicios">
+            </div>
+        </section>
 
         <section class="contenido">
-            <h2>Últimas noticias sobre tapicería del automóvil</h2>
-            <div class="noticias">
-                <!-- Content for this div can be added here -->
-            </div>
-        </section>
-   
-        <section class="container">
-            <div class="servicios">
-             <h3> Nuestros Servicios</h3>
-                <ul>
-                    <li>Diseño personalizado</li>
-                    <li>Instalación de tapicería</li>
-                    <li>Reconstrucciónes de asientos</li>
-                    <li>Reparación de tapizados</li>
-                    <li>Restauración de antigüedades</li>
-                    <li>Tapizado de barcos</li>
-                    <li>Reformas</li>
-                </ul>
-            </div>
-            <div class="foto">
-                <img src="./assets/images/asientos-barco.jpg" alt="imagen1" width="400" height="300">
-                <img src="./assets/images/asientosporsche3.jpg" alt="imagen2" width="400" height="286">
-                <img src="./assets/images/puertaporsche1.jpg" alt="imagen3" width="400" height="300">
-                <img src="./assets/images/salpicadero-reparado.jpg" alt="imagen4" width="400" height="300">
-                <img src="./assets/images/volante3.jpg" alt="imagen5" width="400" height="400">
-                <img src="./assets/images/volante1.jpg" alt="imagen6" width="400" height="300">   
-            </div>
-        </section>
+            <h2>
+                <a href="./views/contacto.html">Contáctanos:</a>
+            </h2>
+            <hr>
 
-        <section class="container">
-            <div class="mapa">
-                <h2>Dirección:</h2>
-                <p>C. Diamante, 37, Pol. Ind. "La Ermita" <br>
-                29603, Marbella, <br> Málaga, España</p> 
-                <a href="https://maps.app.goo.gl/1nyGeTP441d4KmiH8" target="_blank" class="button-link" style="color: black;">como llegar</a>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.6513957949824!2d-4.872217790050994!3d36.514276272214644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72d9f653f75841%3A0x589be46774dcb69e!2sTipTop%20Tapicer%C3%ADa!5e0!3m2!1ses!2ses!4v1742337614005!5m2!1ses!2ses" width="2000" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
             <div class="formulario1">
-                <h3>Contáctanos:</h3>
-                <form id="form">
+                <form  id="form">
                     <fieldset>
                         <legend>Datos personales</legend>
                         <div class="datos">
@@ -92,21 +70,21 @@
                             <span>*</span>       
                         </div>
                         <span class="error" id="nombreError"></span> 
-                        
+                            
                         <div class="datos">
                             <label for="apellido">Apellidos:</label>
                             <input type="text" id="apellido" name="apellido" placeholder="Apellidos completos"> 
                             <span>*</span>
                         </div>
                         <span class="error" id="apellidoError"></span> 
-
+    
                         <div class="datos">
                             <label for="telephone">Teléfono:</label>
                             <input type="text" id="telephone" name="telephone" placeholder="Telefono">
                             <span>*</span>
                         </div>
                         <span class="error" id="telefonoError"></span>
-
+    
                         <div class="datos">
                             <label for="email">E-mail:</label>
                             <input type="email" id="email" name="email" placeholder="Correo electronico"> 
@@ -115,54 +93,58 @@
                         <span class="error" id="emailError"></span> 
                         <span class="camposObligatorios"> (*) Los campos marcados con asterisco son obligatorios.</span>    
                     </fieldset>
-                    
+                        
                     <fieldset>
                         <legend>Mensaje</legend>
                         <textarea name="mensaje" id="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
                     </fieldset>
-
+    
                     <fieldset>
                         <legend>Aceptacíon de  condiciones</legend>
-                        <p></p>
                         <ul class="aceptacion">
-                            <li>
-                                <label id="aceptar" for="terminos">He leído y acepto las condiciones </label>
-                            </li>
-                            <li>
-                                <input id="terminos" type="checkbox" name="aceptar">
-                            </li>
+                            <li><label id="aceptar" for="terminos">He leído y acepto las condiciones </label></li>
+
+                            <li><input id="terminos" type="checkbox" name="aceptar"></li>
                         </ul>
                     </fieldset>
+    
+                    <div class="botones">
+                        <button type="submit" id="submit">Enviar</button>
 
-                    <ul class="botones">
-                        <li>
-                            <button type="submit" id="submit">Enviar
-                            </button>
-                        </li>
-                        <li>
-                            <button type="reset" id="reset">Borrar
-                            </button>
-                        </li>
-                    </ul>
+                        <button type="reset" id="reset">Borrar</button>
+                    </div> 
                     <p id="mensaje-error" class="error"></p>
-                    <p id="mensaje" class="mensaje"></p>
+                    <p id="mensaje" class="mensaje"></p>                   
                 </form>
             </div>
-        </section>
+        
+            <div class="direccion">
+                <h3>Dirección:</h3>
+                <p>C. Diamante, 37, Pol. Ind. "La Ermita" <br>
+                29603, Marbella, <br> Málaga, España</p> 
+                <a href="https://maps.app.goo.gl/1nyGeTP441d4KmiH8" target="_blank" class="button-link">COMO LLEGAR</a>
+            </div>
+        </section>   
+        
 
-        <div class="whatsapp">
-            <img src="./assets/images/icons/whatsapp-logo.svg" alt="whatsapp" width="20" height="20">
-            <a href="https://wa.me/34603849757" target="_blank">Chat  WHATSAPP</a>
-        </div>
+        <section class="contenido">
+            <h2>Últimas noticias sobre tapicería del automóvil</h2>
+            <div class="noticias">
+                todavia no tengo noticias
+            </div>
+            <div class="whatsapp">
+                <a href="https://wa.me/34603849757" target="_blank"><img src="./assets/images/icons/whatsapp-green.svg" alt="whatsapp" width="60" height="60"></a>
+            </div>
+        </section>
+        
     </main>
 
     <footer>
         <div>
-            <p>© 2025 Tip Top Taller. <br>Todods los derechos reservados</p> 
+            <p>© 2025 Tip Top Taller</p> <p>Todods los derechos reservados</p> 
             <a href="#">Política de privacidad</a>
         </div>
         <div>
-            <p class="p-footer"> CONTACTO:</p>
             <p>C. Diamante, 37, 29603 Marbella,</p>
             <p> Málaga, España </p>
             <p>(+34) 603 849 757 </p>
